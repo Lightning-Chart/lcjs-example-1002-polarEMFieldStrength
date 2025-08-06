@@ -46,16 +46,6 @@ const app = (data) => {
     }
     updateData()
 
-    // Add LegendBox.
-    const legendBox = polar
-        .addLegendBox()
-        // Dispose example UI elements automatically if they take too much space. This is to avoid bad UI on mobile / etc. devices.
-        .setAutoDispose({
-            type: 'max-width',
-            maxWidth: 0.2,
-        })
-    legendBox.add(polar)
-
     // Freeze data animation while mouse is on Chart.
     let mouseOverBackground = false
     let numSeriesOverMouse = false
