@@ -34,6 +34,15 @@ textRenderer: window.lcjsSmallView ? lcjs.htmlTextRenderer : undefined,
         return polarAreaSeries
     })
 
+    // Add a Sector highlighter.
+    const sector = polar
+        .addSector()
+        .setName('Max Field Strength')
+        .setAngleStart(275)
+        .setAngleEnd(320)
+        .setAmplitudeStart(0)
+        .setAmplitudeEnd(11)
+
     // Animate series data with random static to simulate live sensor data.
     let freezeData = false
     const updateData = () => {
